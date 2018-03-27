@@ -256,3 +256,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	background-color: rgba(113,43,144,1);
 	padding: 12px;
 }
+.bvnw-padding {
+	padding-left="1%" 
+	padding-right="1%"
+}
