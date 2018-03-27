@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<title>Calendar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+*{margin:0;padding:0;}
+
+#calendar{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border-radius: 5px;
+	font-family: 'Open Sans',sans-serif;
+	text-align: center;
+	color: #555;
+	box-shadow: 0 0 50px -14px rgba(0,0,0,.8);
+}
+
+#calendar h1{
+  background:#712b90;
+  border-radius:5px 5px 0 0;
+  padding:20px;
+  font-size:140%;
+  font-weight:300;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#fff;
+  cursor:default;
+  text-shadow:0 0 10px rgba(0,0,0,.8);
+}
+
+#calendar table{
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-spacing: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 0;
+}
+
+#calendar td{
+  width:38px;
+  height:38px;
+  background:#eee;
+  border-right:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  padding:6px;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+#calendar td:hover:not(.current){
+  background:#ddd;
+}
+
+#calendar .lastmonth,#calendar .nextmonth,#calendar .nextmonth ~ *{
+  background:#fff;
+  color:#999;
+}
+
+#calendar .current{
+  background:#712b90;
+  font-weight:700;
+  color:#fff;
+  text-shadow:0 0 10px rgba(0,0,0,.5);
+}
+
+#calendar .hastask{
+  font-weight:700;
+}
+
+#calendar tr:last-of-type td:first-of-type{border-radius:0 0 0 5px;}
+#calendar tr:last-of-type td:last-of-type{border-radius:0 0 5px 0;}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large"><a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onClick="myFunction()" title="Toggle Navigation Menu"><em class="fa fa-bars"></em></a> <a href="bvnw.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a> <a href="info.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Info</a> <a href="registration.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Registration</a> <a href="activities.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Activities</a> <a href="staff.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Staff</a> <a href="https://blue.ent.sirsi.net/client/en_US/bvnw/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Library</a> <a href="nurse.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nurse</a> <a href="http://bvnwnews.com/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">News</a> <a href="calendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calendar</a></div>
+</div>
+
+  <!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="bvnw.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="info.html" class="w3-bar-item w3-button w3-padding-large">Info</a>
+    <a href="registration.html" class="w3-bar-item w3-button w3-padding-large">Registration</a>
+    <a href="activities.html" class="w3-bar-item w3-button w3-padding-large">Activities</a>
+    <a href="staff.html" class="w3-bar-item w3-button w3-padding-large">Staff</a>
+    <a href="https://blue.ent.sirsi.net/client/en_US/bvnw/" class="w3-bar-item w3-button w3-padding-large">Library</a>
+    <a href="nurse.html" class="w3-bar-item w3-button w3-padding-large">Nurse</a>
+    <a href="http://bvnwnews.com/" class="w3-bar-item w3-button w3-padding-large">News</a>
+    <a href="calendar.html" class="w3-bar-item w3-button w3-padding-large">Calendar</a>
+  </div>
+
+<!-- Header -->
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Calendar</h1>
+      <p>&nbsp;</p>
+<div id="calendar">
+  <h1>October</h1>
+  <table width="100% height="100%>
+    <tr><td width="47" class="lastmonth">30</td><td width="47">1</td><td width="47">2</td><td width="47">3</td><td width="47" class="hastask">4</td><td width="47">5</td><td width="47">6</td></tr>
+    <tr><td>7</td><td class="current">8</td><td class="hastask">9</td><td>10</td><td>11</td><td class="hastask">12</td><td>13</td></tr>
+    <tr><td>14</td><td class="hastask">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+    <tr><td class="hastask">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td class="hastask">26</td><td>27</td></tr>
+    <tr><td>28</td><td>29</td><td class="hastask">30</td><td>31</td><td class="nextmonth">1</td><td>2</td><td>3</td></tr>
+  </table>
+</div>
+      <div>
+        <div>
+          <div> 
+			<h2>&nbsp;</h2>
+			<h2>October 8, 2018          </h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div><span id="SchoolHours">
+		    <h3><a href="https://district.bluevalleyk12.org/schools/high/BVNW/Pages/Calendar.aspx">View Full Calendar</a></h3>
+			  <p><span id="DeltaPlaceHolderMain"><strong>Upcoming Important Dates:</strong></span>			  </p>
+			  <p>Placeholder Event</p>
+          </span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-left-align bvnw-padding"><span id="SchoolHours2">
+    <h3>Choir Solo/Small Ensemble Concert</h3>
+	<h5><strong>Time: </strong>3:00 - 9:00 PM</h5>
+    <p><span id="DeltaPlaceHolderMain2"><span id="ctl00_ctl58_g_461ff232_c4d5_4fb2_bd23_ae514664b841_EventLoclb"><strong>Location: </strong>Little Theater, Vocal Music Multi-Purpose Area</span></span></p>
+    <p>&nbsp;</p>
+    </span>
+      <h3><span id="SchoolHours3" padding-left="1%" padding-right="1%">Lunch Menu</span></h3>
+      <p><span id="SchoolHours4">Beef &amp; Cheese Nachos<br>
+        Soft Tacos<br>
+        Popcorn Chicken with Pizza Stick<br>
+        BBQ Pork Rib Patty on Whole Grain Bun<br>
+        Spicy Chicken Patty Sandwich<br>
+        Whole Grain Pasta Bar<br>
+        Pizza Hut Pizza by the Slice<br>
+        Ham, Chicken or Cheese Deli Sandwiches<br>
+        Uncrustable with Pretzel Nugget &amp; String Cheese<br>
+        Entrée Salad Option<br>
+  <br>
+        Harvest Bar<br>
+        Fiesta Rice<br>
+        Refried Beans<br>
+        Steamed Corn<br>
+        Diced Tomatoes<br>
+        Chilled Fruit Cocktail<br>
+        Rosy Applesauce<br>
+  <br>
+  <strong>Premium Meal:</strong><br>
+        Queso and Chips<br>
+        Buffalo Chicken Flatbread<br>
+  <br>
+  <strong>A la Carte:</strong><br>
+        Grab and Go Chicken Caesar Salad</span></p>
+      <span>
+      <p>&nbsp;</p>
+    </span></div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+	      <div class="w3-third w3-center"><img src="resources/glass.png" width="179" height="179" alt=""/></div>
+    <div class="w3-third w3-center"></div>
+
+    <div class="w3-twothird">
+      <h1><strong>Resources</strong></h1>
+      <h5 class="w3-padding-32">
+		<div class="block block3">
+          <h3 class="h-title"><strong>Staff Directory</strong></h3>
+            <div class="h-content">
+              <a href="https://district.bluevalleyk12.org/schools/high/BVNW/Pages/Staff-Directory.aspx" id="linkToStaffDirectoryPage" style="display:none">link to staff directory page</a>
+              <select name="grade" class="form-control gray-dropdown white-arrow">
+                    <option value="">Select Subject</option>
+			  <option>Administration</option><option>Art</option><option>Business</option><option>Counselor</option><option>Elementary Reading</option><option>English as a second language</option><option>English Language Arts</option><option>Family and Consumer Science</option><option>French</option><option>Health</option><option>Industrial Technology</option><option>Intervention</option><option>Latin</option><option>Library</option><option>Mathematics</option><option>Nurse</option><option>Performing Arts</option><option>Physical Education</option><option>Psychologist</option><option>Science</option><option>Social Studies</option><option>Spanish</option><option>Special Education</option></select>
+              <select name="teacher" class="form-control gray-dropdown white-arrow">
+                    <option value="">Select Teacher</option>
+              <option data-subject="administration" data-subject-two="">Alexander, Tyler               </option><option data-subject="social studies" data-subject-two="">Anderson, Barbara             </option><option data-subject="performing arts" data-subject-two="">Arbucci, Michael             </option><option data-subject="mathematics" data-subject-two="">Armenta, C.J.                </option><option data-subject="special education" data-subject-two="">Askew, Chad                </option><option data-subject="performing arts" data-subject-two="">Askren, Melissa             </option><option data-subject="" data-subject-two="">Bartholome, Renee               </option><option data-subject="science" data-subject-two="">Belcher, Brooke              </option><option data-subject="" data-subject-two="">Berry, Jamie               </option><option data-subject="administration" data-subject-two="">Boan, Nacole              </option><option data-subject="special education" data-subject-two="">Boeding, Michele             </option><option data-subject="" data-subject-two="">Boyda, Melanie             </option><option data-subject="mathematics" data-subject-two="">Bubalo, Brian               </option><option data-subject="social studies" data-subject-two="">Christensen, Matthew             </option><option data-subject="" data-subject-two="">Condon, Sandra              </option><option data-subject="social studies" data-subject-two="">Copeland, Mark                </option><option data-subject="spanish" data-subject-two="">Coyne, Marlee              </option><option data-subject="mathematics" data-subject-two="">Deffer, Laura               </option><option data-subject="performing arts" data-subject-two="">Delgado, Art                               </option><option data-subject="science" data-subject-two="">derks, sarah               </option><option data-subject="social studies" data-subject-two="">dewey, tenny               </option><option data-subject="mathematics" data-subject-two="">doerhoefer, sara                </option><option data-subject="special education" data-subject-two="">dowdy, kimberly            </option><option data-subject="english language arts" data-subject-two="">eigenberg, dan                 </option><option data-subject="" data-subject-two="">faggett, david               </option><option data-subject="english language arts" data-subject-two="">farrington, kyle                </option><option data-subject="english language arts" data-subject-two="">farrington, kyle                </option><option data-subject="mathematics" data-subject-two="">finical, jamie               </option><option data-subject="physical education" data-subject-two="">fritz, edwin               </option><option data-subject="" data-subject-two="">garcia, anthony             </option><option data-subject="intervention" data-subject-two="intervention specialist">geenens, megan               </option><option data-subject="administration" data-subject-two="">gerke, kevin               </option><option data-subject="counselor" data-subject-two="">goldsmith, kimberly            </option><option data-subject="special education" data-subject-two="">gray, jordan              </option><option data-subject="counselor" data-subject-two="">greene, luke                </option><option data-subject="english language arts" data-subject-two="">gulbranson, lindsay             </option><option data-subject="industrial technology" data-subject-two="">gustafson, donald              </option><option data-subject="industrial technology" data-subject-two="">gustafson, donald              </option><option data-subject="counselor" data-subject-two="">hadley, nancy               </option><option data-subject="health" data-subject-two="">haggerty, molly               </option><option data-subject="science" data-subject-two="">halastik, emily               </option><option data-subject="science" data-subject-two="">halastik, emily               </option><option data-subject="science" data-subject-two="">hale, jim                 </option><option data-subject="mathematics" data-subject-two="">hanzivasilis, nicholas            </option><option data-subject="mathematics" data-subject-two="">harper, sarah-nicole        </option><option data-subject="english language arts" data-subject-two="">harsch, zach                </option><option data-subject="mathematics" data-subject-two="">henderson, karen               </option><option data-subject="mathematics" data-subject-two="">henderson, karen               </option><option data-subject="art" data-subject-two="">herrera, stephen             </option><option data-subject="" data-subject-two="">hess, carol               </option><option data-subject="spanish" data-subject-two="">hillen, kari                </option><option data-subject="english language arts" data-subject-two="">hillstock, kimberly            </option><option data-subject="special education" data-subject-two="">hodges, robin               </option><option data-subject="" data-subject-two="">hoffmeister, tanya               </option><option data-subject="science" data-subject-two="">hogan, taylor              </option><option data-subject="science" data-subject-two="">hogan, taylor              </option><option data-subject="mathematics" data-subject-two="">hogan, teresa              </option><option data-subject="special education" data-subject-two="">hoing, jenna               </option><option data-subject="" data-subject-two="">hughes, laura               </option><option data-subject="nurse" data-subject-two="">imlay, becky               </option><option data-subject="special education" data-subject-two="">irvine, julie               </option><option data-subject="mathematics" data-subject-two="">johnson, catherine           </option><option data-subject="science" data-subject-two="">kennedy, theresa             </option><option data-subject="mathematics" data-subject-two="">kinkelaar, kerry               </option><option data-subject="mathematics" data-subject-two="">kinkelaar, kerry               </option><option data-subject="performing arts" data-subject-two="">landes, steve               </option><option data-subject="social studies" data-subject-two="">lange, corby               </option><option data-subject="art" data-subject-two="">lavalley, chris               </option><option data-subject="business" data-subject-two="">lecount, matthew             </option><option data-subject="business" data-subject-two="">lecount, matthew             </option><option data-subject="family and consumer science" data-subject-two="">long, lora                </option><option data-subject="performing arts" data-subject-two="">lundine, adam                </option><option data-subject="performing arts" data-subject-two="">lundine, adam                </option><option data-subject="special education" data-subject-two="">maas, sarah               </option><option data-subject="spanish" data-subject-two="">martens, heather             </option><option data-subject="latin" data-subject-two="">marx, joseph              </option><option data-subject="industrial technology" data-subject-two="">masten, darren              </option><option data-subject="industrial technology" data-subject-two="">masten, darren              </option><option data-subject="library" data-subject-two="">mccabe, mary                </option><option data-subject="performing arts" data-subject-two="">mccrossen, jim                 </option><option data-subject="social studies" data-subject-two="">meacham, robert              </option><option data-subject="english language arts" data-subject-two="">merrigan, emilie              </option><option data-subject="french" data-subject-two="">metcalf-buchanan, breanne             </option><option data-subject="special education" data-subject-two="">michaels, lillian             </option><option data-subject="art" data-subject-two="">mikel, melanie             </option><option data-subject="counselor" data-subject-two="">miller, jacelyn             </option><option data-subject="science" data-subject-two="">mohn, jeremy              </option><option data-subject="science" data-subject-two="">mohn, jeremy              </option><option data-subject="administration" data-subject-two="">murphy, amy                 </option><option data-subject="social studies" data-subject-two="">murphy, brian               </option><option data-subject="spanish" data-subject-two="">mustan, teresa              </option><option data-subject="social studies" data-subject-two="">newsum, amy                 </option><option data-subject="special education" data-subject-two="">noltemeyer, sally               </option><option data-subject="library" data-subject-two="">odle, craig               </option><option data-subject="social studies" data-subject-two="">ohlde, jonathan            </option><option data-subject="english language arts" data-subject-two="">orrick, nicole              </option><option data-subject="social studies" data-subject-two="">orrick, zack                </option><option data-subject="special education" data-subject-two="">paradise, julie               </option><option data-subject="english language arts" data-subject-two="">pearson, erin                </option><option data-subject="science" data-subject-two="">petersen, todd                </option><option data-subject="business" data-subject-two="">plankers, madeline            </option><option data-subject="business" data-subject-two="">plankers, madeline            </option><option data-subject="science" data-subject-two="">podany, michaelyn           </option><option data-subject="art" data-subject-two="">pollack, brian               </option><option data-subject="art" data-subject-two="">pollack, brian               </option><option data-subject="physical education" data-subject-two="">pothoven, michelle            </option><option data-subject="physical education" data-subject-two="">pothoven, michelle            </option><option data-subject="mathematics" data-subject-two="">potter, carolyn             </option><option data-subject="english language arts" data-subject-two="">pribyl, rick                </option><option data-subject="mathematics" data-subject-two="">ratigan, michele             </option><option data-subject="physical education" data-subject-two="">reichart, john                </option><option data-subject="" data-subject-two="">reynolds, debra               </option><option data-subject="performing arts" data-subject-two="">richey-sullivan, elizabeth           </option><option data-subject="performing arts" data-subject-two="">richey-sullivan, elizabeth           </option><option data-subject="special education" data-subject-two="">richter, lauren              </option><option data-subject="counselor" data-subject-two="">ricke, elizabeth           </option><option data-subject="physical education" data-subject-two="">rider, clint               </option><option data-subject="special education" data-subject-two="">rueschhoff, denise              </option><option data-subject="special education" data-subject-two="">sanders, angela              </option><option data-subject="elementary reading" data-subject-two="">schaumburg, jane                </option><option data-subject="english as a second language" data-subject-two="">schlumpf heymach, elissa              </option><option data-subject="science" data-subject-two="">schumacher, keri                </option><option data-subject="science" data-subject-two="">schumacher, keri                </option><option data-subject="physical education" data-subject-two="">serbousek, tim                 </option><option data-subject="spanish" data-subject-two="">smith, andrea              </option><option data-subject="english language arts" data-subject-two="">smithyman, bill                </option><option data-subject="english language arts" data-subject-two="">smithyman, bill                </option><option data-subject="science" data-subject-two="">strieby, linda               </option><option data-subject="science" data-subject-two="">sula, nanet               </option><option data-subject="business" data-subject-two="">swanson, patrick             </option><option data-subject="business" data-subject-two="">swanson, patrick             </option><option data-subject="psychologist" data-subject-two="">symes, monica              </option><option data-subject="social studies" data-subject-two="">thomas, ken                 </option><option data-subject="business" data-subject-two="">trader, meghan              </option><option data-subject="business" data-subject-two="">trader, meghan              </option><option data-subject="french" data-subject-two="">tubbesing, catherine           </option><option data-subject="" data-subject-two="">waldo, dianne              </option><option data-subject="english language arts" data-subject-two="">wang, christa             </option><option data-subject="english language arts" data-subject-two="">warner, alexandria          </option><option data-subject="performing arts" data-subject-two="">white, kimberly            </option><option data-subject="performing arts" data-subject-two="">white, kimberly            </option><option data-subject="mathematics" data-subject-two="">williams, michelle            </option><option data-subject="english language arts" data-subject-two="">witty, amanda              </option></select>
+                <input id="teacherFindBtn" value="Search" class="btn-default btn" type="button">
+
+            </div>
+      </div></h5>
+      <div></div>
+      <div>
+		 <h4><strong>Address</strong></h4>
+        <div><a href="https://www.google.com/maps/dir//Blue+Valley+Northwest+High+School,+13260+Switzer+Rd,+Overland+Park,+KS+66213/@38.8885806,-94.7032351,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87c0c02140dbeb05:0x93b1e92b29a6cab!2m2!1d-94.7032351!2d38.8885806">13260 Switzer Rd</a></div>
+        <div><a href="https://www.google.com/maps/dir//Blue+Valley+Northwest+High+School,+13260+Switzer+Rd,+Overland+Park,+KS+66213/@38.8885806,-94.7032351,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87c0c02140dbeb05:0x93b1e92b29a6cab!2m2!1d-94.7032351!2d38.8885806">Overland Park, Kansas</a></div>
+      </div>
+      <div>
+		 <h4><strong>Phone Number</strong></h4>
+        <div><a href="tel:1-913-239-3400">(913) 239-3400</a></div>
+       		 <h4><strong>Email Address</strong></h4>
+        <div><a href="mailto:BlueValleyNorthwest@bluevalleyk12.org">BlueValleyNorthwest@bluevalleyk12.org</a></div>
+      </div>
+</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <p><a href="https://codepen.io/miroot/pen/aHCIg?q=calendar&limit=all&type=type-pens"><strong>Credits: </strong>Calendar CSS &amp; HTML</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+	</body>
+</html>
