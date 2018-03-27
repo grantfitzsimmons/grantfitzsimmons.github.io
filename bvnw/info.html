@@ -7,72 +7,137 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+#StudentLinks {
+	padding-left: 12px;
+}
 </style>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large"><a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onClick="myFunction()" title="Toggle Navigation Menu"><em class="fa fa-bars"></em></a> <a href="bvnw.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Info</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Registration</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Students</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Parents</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Staff</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Library</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nurse</a> <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Links</a><a href="calendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calendar</a></div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="bvnw.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="info.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Info</a>
+    <a href="registration.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Registration</a>
+    <a href="activites.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Activities</a>
+    <a href="staff.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Staff</a>
+    <a href="library.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Library</a>
+    <a href="nurse.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nurse</a>
+    <a href="links.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Links</a>
+    <a href="calendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calendar</a>
   </div>
 </div>
 
+  <!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="bvnw.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="info.html" class="w3-bar-item w3-button w3-padding-large">Info</a>
+    <a href="registration.html" class="w3-bar-item w3-button w3-padding-large">Registration</a>
+    <a href="activities.html" class="w3-bar-item w3-button w3-padding-large">Activities</a>
+    <a href="staff.html" class="w3-bar-item w3-button w3-padding-large">Staff</a>
+    <a href="library.html" class="w3-bar-item w3-button w3-padding-large">Library</a>
+    <a href="nurse.html" class="w3-bar-item w3-button w3-padding-large">Nurse</a>
+    <a href="links.html" class="w3-bar-item w3-button w3-padding-large">Links</a>
+    <a href="calendar.html" class="w3-bar-item w3-button w3-padding-large">Calendar</a>
+  </div>
+
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Blue Valley Northwest</h1>
-  <p class="w3-xlarge">Blue Valley Schools</p>
-</header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>School Schedule</h1>
-      <div>
+    <div class="w3-twothird" id="TwoThird">
+      <h1 class="bvnw_header" style="font-family: Lato, sans-serif"><strong>Administration</strong></h1>
+      <img src="resources/header.jpg" width="100%" height="100%" padding-left="1%" padding-right="1%" alt="BVNW Students"/>
+		<div>
         <div>
-          <h3><span id="DeltaPlaceHolderMain">Staff Directory</span></h3>
+          <h3><span id="DeltaPlaceHolderMain" style="font-family: Lato, sans-serif"><strong><img src="resources/administrators/AMurphy.jpg" alt="Amy Murphy" width="80" height="80"></img>  &nbsp; Amy Murphy, Principal</strong></span></h3>
           <div> </div>
         </div>
       </div>
       <div>
         <div>
-          <div> 
-            <p><span id="ContactInfo"><a href="mailto:AMurphy@bluevalleyk12.org">Amy Murphy</a>, Principal​<br>
-              <a href="mailto:TWAlexander@bluevalleyk12.org">Tyler Alexander</a>, Assoc Principal<br>
-              <a href="mailto:KGerke02@bluevalleyk12.org">Kevin Gerke</a>, Asst Principal​<br>
-              <a href="mailto:SBoan@bluevalleyk12.org">Nacole Boan</a>, Asst Principal​<br>
-              <a href="mailto:DLWaldo@bluevalleyk12.org">Dianne Waldo</a>, Principal's Sec<br>
-              <a href="mailto:LHughes02@bluevalleyk12.org">Laura Hughes</a>, Registrar​​</span>          </p>
+          <div>
+            <p>Dr. Amy Murphy, principal, has wanted to be an educator since she was little. Having grown up with a mother and step-father who were both educators, Amy has always know her calling was to help educate young people. After attending Grove City College (Grove City, PA) and earning a B.S. in Mathematics and Secondary Education, she began her teaching career in Onslow County, North Carolina. She taught for the Department of Defense and Onslow County Schools for eight years before joining the Blue Valley School District. During her time in North Carolina, she earned her Master's Degree from East Carolina University in Curriculum and Instruction and her certification for K-12 Building Administration. While in Blue Valley, she has been a teacher at Harmony Middle School, assistant principal at Pleasant Ridge Middle School, associate principal at Blue Valley North and principal at Blue Valley Northwest. During that time, she earned her Doctorate of Education in School Administration from Saint Louis University. When she is not at school, she enjoys spending time with her best friend and soulmate Mark and his grown children Sarah and Dan, and their golden doodle Annie the Dog. Her free time is spent relaxing at their lake house, reading and crafting. Pinterest is her favorite website!</p>
+
+<p>She loves that she gets to work with such amazing students each day. She believes​ that high school educators have the unique opportunity to help these young adults deepen their understanding of themselves, their goals and dreams as well as their relationship and importance to the world beyond the walls of the high school.​</p>
           </div>
+			<h3><strong><img src="resources/administrators/TAlexander.jpg"></img> Tyler Alexander, Associate Principal</strong></h3>
+          <p>Mr. Tyler Alexander, associate principal of curriculum and instruction, grew up in a family of educators. He quickly realized in college that a major in education was the right fit for him. Mr. Alexander earned a B.A. in History and Secondary Education from MidAmerica Nazarene University. After graduation, he was hired to teach Social Studies and be an assistant soccer coach at Blue Valley Southwest High School. During his time at BVSW, Mr. Alexander taught several social studies courses and served for 4 years as department chair. During this time, Mr. Alexander earned a Master's Degree from Emporia State University in PreK-12 School Administration. Mr. Alexander began his administrative career in 2015 with a move to Blue Valley Northwest. In his time at BVNW, Mr. Alexander has held the positions of administrative intern, activities director, a now in his current position as associate principal of curriculum and instruction. During his time at BVNW, Mr. Alexander has worked towards a Doctoral Degree in School Policy and Administration from the University of Kansas. He plans to be completed with his degree in 2018.</p>
+			<p>Outside of BVNW, Mr. Alexander enjoys spending time with his wife, Kelley, and their 1-year old son, Graham. As a family, they enjoy traveling and being outside as much as possible. Mr. Alexander personally enjoys running, cycling, and competing in triathlon. In order to spend more time with his family, Kelley and Graham often come to NW athletic events to cheer on the Huskies.</p>
+		  <p>Mr. Alexander loves the culture and spirit of BVNW. The staff, students, and community of BVNW make his job exciting and rewarding. Working with students on developing a better sense of themselves both academically and personally is one of the best parts about his job. Continuing to develop a culture of purpose and student choice is an ongoing goal of his and he is excited about the amazing things happening in the classrooms and hallways at BVNW! </p>
+          <h3><span style="font-family: Lato, sans-serif"><img src="resources/administrators/KGerke.jpg" width="80" height="80"></img>   <strong>Kevin Gerke, Assistant Principal</strong></span>&nbsp;</h3>
+          <p>Much like Dr. Murphy, Dr. Kevin Gerke, assistant principal and athletic director, wanted to be a teacher and coach for as long as he can remember. Kevin has always had a passion for working with young people even back to his days working as a camp counselor and helping coach youth sports as a high school student. After earning a degree in 7-12 Social Studies Education from Central Methodist University, Kevin began his teaching and coaching career at Lebanon Junior High School in Lebanon, Missouri where he taught 7th and 8th grade Social Studies, coached freshmen basketball, and was charged with starting both a varsity boys and girls soccer program at Lebanon High School. After three years in Lebanon, Kevin accepted a teaching and coaching position in Belton, Missouri. Kevin taught 8th grade Social Studies and served as an assistant coach for both the boys and girls soccer programs as well as the boys basketball program at Belton High School. One year later, Kevin was named the new head boys basketball coach, a position he held for the next nine years. While in Belton, Kevin earned his Master’s Degree from the University of Central Missouri. Kevin began his administrative career in 2007 and spent the next eight years as an assistant principal in the Belton School District.</p> 
+			  <p>Kevin moved to Blue Valley Northwest in 2015 and served one year as an assistant principal and activities director before becoming assistant principal and athletic director. During this time, Kevin earned his Doctorate of Education in Educational Leadership from Baker University. In his free time, Kevin enjoys spending time with his wife Carmen and three sons Zach, Brett, and Braden. His family has a passion for sports and he absolutely loves the crazy life created by helping his boys pursue their passions.</p>
         </div>
       </div>
       <div>
-        <div>
-          <div><span id="SchoolHours">​​7:45 a.m. - 2:50 p.m. school hours<br>
-            ​7:00 a.m. - 4:00 p.m. office hours<br>
-            ​(913) 239-3400 office<br>
-            (913) 239-3401 attendance<br>
-            (913) 239-3423 nurse<br>
-            (913) 239-3415 counseling<br>
-            (913) 239-3499 information line<br>
-            (913) 239-3555 fax​</span></div>
-        </div>
+        <div> </div>
       </div>
     </div>
-
-    <div class="w3-third w3-center">
-      <i><img src="resources/Blue_Valley_Northwest_High.png" width="200" height="200" alt="BVNW"/></i>
+    <div class="w3-third w3-center" id="StudentLniks">
+      <p><i><img src="resources/Blue_Valley_Northwest_High.png" width="200px" height="200px" alt="BVNW"/></i></p><table width="100%" border="0" class="w3-table w3-bordered w3-hoverable">
+		<div>
+<input type="text" name="search" placeholder="Search.."> </div>
+          <caption>
+          <br>
+          </caption>
+              <tbody>
+                <tr class="w3-purple">
+                  <td><strong>Student Links</strong></td>
+                </tr>
+                <tr>
+                  <td><a href="https://bvusd.instructure.com/login/canvas" target="_blank">Canvas</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://adfs.bluevalleyk12.org/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline&wctx=estsredirect%3d2%26estsrequest%3drQIIAbNSzigpKSi20tcvyC8qSczRy09Ly0xO1UvOz9XLL0rPTAGxioS4BDQOGVwNeLLcb2pF2kPJa1ZCqxjVcOrUz0nMS8nMS9dLLC6ouMDI-IKRsYuJxdDA2HgTE6uvs6-T5wmmCWflbjEJ-hele6aEF7ulpqQWJZZk5uc9YuINLU4t8s_LqQzJz07Nm8TMl5OfnpkXX1yUFp-Wk18OFADaUJCYXBJfkpmcnVqyi1klxTg1KdnEOFk3xcTYQtck2TxN19LEwFTXIMU0NcXYwMjUMtHyAMuGkF2cnsS52b4ksSg9tcRW1SgtJTUtsTSnBCysapyWk6xqnALyCQA1" target="_blank">Office 365</a></td>
+                </tr>
+                <tr>
+					<td><a href="resources/Bell-Schedule.pdf">Bell Schedule</a></td>
+                </tr>
+                <tr>
+                  <td><a href="http://o365.bluevalleyk12.org" target="_blank">Student Email</a></td>
+                </tr>
+              </tbody>
+      </table>
     </div>
+<div><span id="ImportantInfo">​​
+	<div>
+	  <p>&nbsp;</p>
+	</div>
+			  <h3><strong class="w3-purple bvnw-padding" style="">Important Info:</strong></h3>
+			  <strong>School Hours: </strong>7:45 A.M. - 2:50 P.M. school hours<br>
+​<strong>Office Hours: </strong>7:00 A.M. - 4:00 P.M. office hours<br>
+		<h5><strong>Phone Information:</strong></h5>
+Office: <a href="tel:1-913-239-3400">(913) 239-3400</a><br>
+Attendance: <a href="tel:1-913-239-3401">(913) 239-3401</a><br>
+Nurse: <a href="tel:1-913-239-3423">(913) 239-3423</a><br>
+Counseling: <a href="tel:1-913-239-3415">(913) 239-3415</a><br>
+Information Line: <a href="tel:1-913-239-3499">(913) 239-3499</a><br>
+Fax: <a href="tel:1-913-239-3555">(913) 239-3555</a></span></div>       
   </div>
 </div>
 
@@ -83,10 +148,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-third w3-center"></div>
 
     <div class="w3-twothird">
-      <h1>Resources</h1>
+      <h1><strong>Resources</strong></h1>
       <h5 class="w3-padding-32">
 		<div class="block block3">
-          <h3 class="h-title">Staff Directory</h3>
+          <h3 class="h-title"><strong>Staff Directory</strong></h3>
             <div class="h-content">
               <a href="https://district.bluevalleyk12.org/schools/high/BVNW/Pages/Staff-Directory.aspx" id="linkToStaffDirectoryPage" style="display:none">link to staff directory page</a>
               <select name="grade" class="form-control gray-dropdown white-arrow">
@@ -99,17 +164,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
             </div>
       </div></h5>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+      <div></div>
+      <div>
+		 <h4><strong>Address</strong></h4>
+        <div><a href="https://www.google.com/maps/dir//Blue+Valley+Northwest+High+School,+13260+Switzer+Rd,+Overland+Park,+KS+66213/@38.8885806,-94.7032351,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87c0c02140dbeb05:0x93b1e92b29a6cab!2m2!1d-94.7032351!2d38.8885806">13260 Switzer Rd</a></div>
+        <div><a href="https://www.google.com/maps/dir//Blue+Valley+Northwest+High+School,+13260+Switzer+Rd,+Overland+Park,+KS+66213/@38.8885806,-94.7032351,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87c0c02140dbeb05:0x93b1e92b29a6cab!2m2!1d-94.7032351!2d38.8885806">Overland Park, Kansas</a></div>
+      </div>
+      <div>
+		 <h4><strong>Phone Number</strong></h4>
+        <div><a href="tel:1-913-239-3400">(913) 239-3400</a></div>
+      </div>
+<p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
-</div>
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-  <h1 class="w3-margin w3-xlarge">Since 1993</h1>
 </div>
 
 <!-- Footer -->
