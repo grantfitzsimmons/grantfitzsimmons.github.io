@@ -11,6 +11,9 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+#StudentLinks {
+	padding-left: 12px;
+}
 </style>
 <body>
 
@@ -46,19 +49,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 
 <!-- Header -->
-<header class="w3-red w3-center w3-hide-small" style="padding:128px 32px">
-  <h1 class="w3-margin"> Blue Valley Northwest</h1>
-  <p class="w3-large">Concept by Grant Fitzsimmons</p>
-</header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Blue Valley Northwest</h1>
-      <div>
+    <div class="w3-twothird" id="TwoThird">
+      <h1 class="bvnw_header" style="font-family: Lato, sans-serif">Blue Valley Northwest</h1>
+	
+            <img src="resources/bvnw_students.jpg" width="100%" height="100%" padding-right="1%" alt="BVNW Students"/>
+		<div>
         <div>
-          <h3><span id="DeltaPlaceHolderMain">Staff Directory</span></h3>
+          <h3><span id="DeltaPlaceHolderMain" style="font-family: Lato, sans-serif"><strong>Staff Directory</strong></span></h3>
           <div> </div>
         </div>
       </div>
@@ -76,21 +77,40 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </div>
       <div>
         <div>
-          <div><span id="SchoolHours">​​7:45 a.m. - 2:50 p.m. school hours<br>
-            ​7:00 a.m. - 4:00 p.m. office hours<br>
-            ​(913) 239-3400 office<br>
-            (913) 239-3401 attendance<br>
-            (913) 239-3423 nurse<br>
-            (913) 239-3415 counseling<br>
-            (913) 239-3499 information line<br>
-            (913) 239-3555 fax​</span></div>
+          <div><span id="SchoolHours">​​<strong>School Hours: </strong>7:45 A.M. - 2:50 P.M. school hours<br>
+​<strong>Office Hours: </strong>7:00 A.M. - 4:00 P.M. office hours<br>
+		<h5><strong>Phone Information:</strong></h5>
+Office: <a href="tel:1-913-239-3400">(913) 239-3400</a><br>
+Attendance: <a href="tel:1-913-239-3401">(913) 239-3401</a><br>
+Nurse: <a href="tel:1-913-239-3423">(913) 239-3423</a><br>
+Counseling: <a href="tel:1-913-239-3415">(913) 239-3415</a><br>
+Information Line: <a href="tel:1-913-239-3499">(913) 239-3499</a><br>
+Fax: <a href="tel:1-913-239-3555">(913) 239-3555</a></span></div>
         </div>
       </div>
     </div>
 
-    <div class="w3-third w3-center">
-      <i><img src="resources/Blue_Valley_Northwest_High.png" width="200" height="200" alt="BVNW"/></i>
+    <div class="w3-third w3-center" id="StudentLniks">
+      <p><i><img src="resources/Blue_Valley_Northwest_High.png" width="60%" height="60%" alt="BVNW"/></i></p><table width="100%" border="0" class="w3-table w3-bordered w3-hoverable">
+          <caption>&nbsp;
+          </caption>
+              <tbody>
+                <tr class="w3-purple">
+                  <td><strong>Student Links</strong></td>
+                </tr>
+                <tr>
+                  <td><a href="https://bvusd.instructure.com/login/canvas" target="_blank">Canvas</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://adfs.bluevalleyk12.org/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline&wctx=estsredirect%3d2%26estsrequest%3drQIIAbNSzigpKSi20tcvyC8qSczRy09Ly0xO1UvOz9XLL0rPTAGxioS4BDQOGVwNeLLcb2pF2kPJa1ZCqxjVcOrUz0nMS8nMS9dLLC6ouMDI-IKRsYuJxdDA2HgTE6uvs6-T5wmmCWflbjEJ-hele6aEF7ulpqQWJZZk5uc9YuINLU4t8s_LqQzJz07Nm8TMl5OfnpkXX1yUFp-Wk18OFADaUJCYXBJfkpmcnVqyi1klxTg1KdnEOFk3xcTYQtck2TxN19LEwFTXIMU0NcXYwMjUMtHyAMuGkF2cnsS52b4ksSg9tcRW1SgtJTUtsTSnBCysapyWk6xqnALyCQA1" target="_blank">Office 365</a></td>
+                </tr>
+                <tr>
+                  <td><a href="http://o365.bluevalleyk12.org" target="_blank">Student Email</a></td>
+                </tr>
+              </tbody>
+      </table>
     </div>
+	<div></div>
   </div>
 </div>
 
@@ -125,11 +145,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </div>
       <div>
 		 <h4><strong>Phone Number</strong></h4>
-        <div><a href="(913) 239-3400">(913) 239-3400</a></div>
+        <div><a href="tel:1-913-239-3400">(913) 239-3400</a></div>
       </div>
-      <h5 class="w3-padding-32">&nbsp;</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+<p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
