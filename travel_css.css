@@ -43,7 +43,7 @@ body {
 	text-transform: capitalize;
 	position: inherit;
 	background-color: white;
-	padding-top: 15px;
+	padding-top: 0px;
 }
 .subtext {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
