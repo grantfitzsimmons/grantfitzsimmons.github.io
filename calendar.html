@@ -8,43 +8,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel"> 
-<link href="fullcalendar.min.css" rel="stylesheet" />
-<link href="fullcalendar.print.min.css" rel="stylesheet" media="print" />
-<script src="lib/moment.min.js"></script>
-<script src="lib/jquery.min.js"></script>
-<script src="fullcalendar.min.js"></script>
-<script src="gcal.min.js"></script>
-<script>
+<link href="calendar/fullcalendar.min.css" rel="stylesheet" />
+<link href="calendar/fullcalendar.print.min.css" rel="stylesheet" media="print" />
+<script src="calendar/moment.min.js"></script>
+<script src="calendar/jquery.min.js"></script>
+<script src="calendar/moment.min.js"></script>
+<script src="calendar/fullcalendar.min.js"></script>
+<script src="calendar/gcal.min.js"></script>
+<script type="text/javascript">
 
-  $(document).ready(function() {
-
-    $('#calendar').fullCalendar({
-
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,listYear'
+$(function() {
+  $('#calendar').fullCalendar({
+	        header: {
+        left: 'title',
+        right: 'prev,next today month,listYear'
       },
-
-      displayEventTime: true, // don't show the time column in list view
-
-      googleCalendarApiKey: 'AIzaSyBz40PmisfHTwMnb9oXlhg4t5rDcdJsypQ',
-
-      events: '9rbtl5luo12ndp1kccrk8bruphb5313j@import.calendar.google.com',
-
-      eventClick: function(event) {
-        // opens events in a popup window
-        window.open(event.url, 'gcalevent', 'width=700,height=600');
-        return false;
-      },
-
-      loading: function(bool) {
-        $('#loading').toggle(bool);
-      }
-
-    });
-
+    googleCalendarApiKey: 'AIzaSyBz40PmisfHTwMnb9oXlhg4t5rDcdJsypQ',
+    events: {
+      googleCalendarId: '9rbtl5luo12ndp1kccrk8bruphb5313j@import.calendar.google.com',
+      className: 'gcal-bvnw' // an option!
+    },
+      eventColor: '#70308e',
   });
+});
 
 </script>
 <style>
@@ -74,17 +60,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
-<script type='text/javascript'>
+<script type="text/javascript">
 
 $(function() {
-  $('#calendar').fullCalendar({
-    googleCalendarApiKey: 'AIzaSyDkNy-oOrRaXWk7miR7ohZkgz_ooOkIIj8',
-    events: {
+  $(function() {
+    $('#calendar').fullCalendar({
+      events: {
       googleCalendarId: '9rbtl5luo12ndp1kccrk8bruphb5313j@import.calendar.google.com'
     }
   });
 });
-
 </script>
 <body>
 
@@ -132,7 +117,7 @@ $(function() {
       </div>
       <div>
         <div>
-           <div id='loading'>loading...</div>
+           <div id="loading">loading...</div>
            
           <div id="calendar"></div>
         </div>
