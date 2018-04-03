@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Calendar</title>
+<title>Registration</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
@@ -8,101 +8,32 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel"> 
-<link href="calendar/fullcalendar.min.css" rel="stylesheet" />
-<link href="calendar/fullcalendar.print.min.css" rel="stylesheet" media="print" />
-<script src="calendar/moment.min.js"></script>
-<script src="calendar/jquery.min.js"></script>
-<script src="calendar/moment.min.js"></script>
-<script src="calendar/fullcalendar.min.js"></script>
-<script src="calendar/gcal.min.js"></script>
-<script type="text/javascript">
-
-$(function() {
-  $('#calendar').fullCalendar({
-    googleCalendarApiKey: 'AIzaSyBz40PmisfHTwMnb9oXlhg4t5rDcdJsypQ',
-    events: {
-      googleCalendarId: '9rbtl5luo12ndp1kccrk8bruphb5313j@import.calendar.google.com',
-      className: 'gcal-bvnw' // an option!
-    },
-      eventColor: '#70308e',
-  },
-	function {
-    if (screenWidth < 700) {
-        options.header = {
-            left: 'prev,next today',
-            center: 'title',
-            right: ''
-        };
-        options.defaultView = 'agendaDay';
-    } else {
-        options.header = {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'agendaDay,agendaWeek,month'
-        };
-        options.defaultView = 'agendaWeek';
+<style> 
+input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
-  });
-});  
-</script>
-<script>
-	function recreateFC(screenWidth) {
-    if (screenWidth < 700) {
-        options.header = {
-            left: 'prev,next today',
-            center: 'title',
-            right: ''
-        };
-        options.defaultView = 'agendaDay';
-    } else {
-        options.header = {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'agendaDay,agendaWeek,month'
-        };
-        options.defaultView = 'agendaWeek';
-    }
-    $fc.fullCalendar('destroy');
-    $fc.fullCalendar(options);
+
+input[type=text]:focus {
+    width: 100%;
 }
-<style>
-
-  body {
-    margin: 40px 10px;
-    padding: 0;
-    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-    font-size: 14px;
-  }
-
-  #loading {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-
-  #calendar {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
 </style>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+#StudentLinks {
+	padding-left: 12px;
+}
 </style>
-<script type="text/javascript">
-
-$(function() {
-  $(function() {
-    $('#calendar').fullCalendar({
-      events: {
-      googleCalendarId: '9rbtl5luo12ndp1kccrk8bruphb5313j@import.calendar.google.com'
-    }
-  });
-});
-</script>
 <body>
 
 <!-- Navbar -->
@@ -131,66 +62,119 @@ $(function() {
 <a href="calendar.html" class="w3-bar-item w3-button w3-padding-large">Calendar</a>
 	</div>
 </div>
-
 <!-- Header -->
-
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1 class="bvnw_header"  style="font-family: Lato, sans-serif">Calendar      </h1>
+    <div class="w3-twothird" id="TwoThird">
+      <h1 class="bvnw_header" style="font-family: Lato, sans-serif"><strong>Safe Schools Reporting</strong></h1>
       <div>
         <div>
-          <div> 
-			<p>&nbsp;</p>
-          </div>
+<div> </div>
         </div>
       </div>
       <div>
         <div>
-           <div id="loading">loading...</div>
-           
-          <div id="calendar"></div>
-        </div>
+<table class="tBullyingReport" style="border-collapse:separate;border-spacing:5px;">
+					<tbody><tr>
+		    <td><span>Items denoted with an asterisk (<span style="color:red">*</span>) are required.</span></td></tr></tbody><tbody><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_dtDateOfIncident"><span style="color:red">*</span>Date of incident</label></td><td valign="top"><input name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$dtDateOfIncident" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_dtDateOfIncident" class="hasDatepicker" type="text"><span id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ctl05" style="color:Red;display:none;">Date of incident is required.</span></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtTimeOfIncident"><span style="color:red">*</span>Time of incident</label></td><td valign="top"><input name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$txtTimeOfIncident" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtTimeOfIncident" type="text"><span id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ctl07" style="color:Red;display:none;">Time of incident is required.</span></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtWhere"><span style="color:red">*</span>Where did the incident occur</label></td><td valign="top"><input name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$txtWhere" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtWhere" type="text"><span id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ctl09" style="color:Red;display:none;">Where the incident occurred is required.</span></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident"><span style="color:red">*</span>Type of incident</label></td><td valign="top"><table id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident">
+							<tbody><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_0" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$0" value="Physical (hitting, spitting, kicking, pushing)" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_0">Physical (hitting, spitting, kicking, pushing)</label></td>
+							</tr><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_1" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$1" value="Emotional (social exclusion, spreading gossip, intimidation)" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_1">Emotional (social exclusion, spreading gossip, intimidation)</label></td>
+							</tr><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_2" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$2" value="Verbal (threats, name calling, gossiping, taunting or teasing)" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_2">Verbal (threats, name calling, gossiping, taunting or teasing)</label></td>
+							</tr><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_3" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$3" value="Sexual (sexual remarks or gestures, innuendos or gender related comments)" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_3">Sexual (sexual remarks or gestures, innuendos or gender related comments)</label></td>
+							</tr><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_4" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$4" value="Cyber (text, chat room, email, social media)" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_4">Cyber (text, chat room, email, social media)</label></td>
+							</tr><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_5" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$5" value="Racial (racial slurs, jokes, innuendos or comments)" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_5">Racial (racial slurs, jokes, innuendos or comments)</label></td>
+							</tr><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_6" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cblTypeOfIncident$6" value="Other" type="checkbox"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cblTypeOfIncident_6">Other</label></td>
+							</tr>
+						</tbody></table></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ddlFrequency"><span style="color:red">*</span>Frequency</label></td><td valign="top"><select name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$ddlFrequency" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ddlFrequency">
+							<option value="Once">Once</option>
+							<option value="Daily">Daily</option>
+							<option value="Weekly">Weekly</option>
+							<option value="Other">Other</option>
+
+						</select><span id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ctl12" style="color:Red;display:none;">Frequency is required.</span></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtDescribeIncident"><span style="color:red">*</span>Describe the incident</label></td><td valign="top"><textarea name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$txtDescribeIncident" rows="2" cols="20" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtDescribeIncident"></textarea><span id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ctl14" style="color:Red;display:none;">Describe the incident is required.</span></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtFirstLastName">Your first and last name</label></td><td valign="top"><input name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$txtFirstLastName" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtFirstLastName" type="text"></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtEmailAddress">Email address</label></td><td valign="top"><input name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$txtEmailAddress" id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_txtEmailAddress" type="text"></td>
+					</tr><tr>
+						<td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_rblAnonymous"><span style="color:red">*</span>Would you like to remain anonymous?</label></td><td valign="top"><table id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_rblAnonymous">
+							<tbody><tr>
+								<td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_rblAnonymous_0" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$rblAnonymous" value="1" type="radio"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_rblAnonymous_0">Yes</label></td><td><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_rblAnonymous_1" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$rblAnonymous" value="0" type="radio"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_rblAnonymous_1">No</label></td>
+							</tr>
+						</tbody></table><span id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_ctl18" style="color:Red;display:none;">Would you like to remain anonymous is required.</span></td>
+					</tr><tr>
+						<td valign="top"><span style="float:right;"><input id="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cbCertify" name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cbCertify" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$cbCertify\',\'\')', 0)" type="checkbox"></span></td><td style="padding-top:7px;" valign="top"><label for="ctl00_ctl58_g_86bbc2d9_ffd9_4a90_938c_905be61df615_cbCertify"><span style="color:red">*</span>I certify that this information is true to the best of my ability.</label></td>
+					</tr><tr>
+						<td></td><td><input name="ctl00$ctl58$g_86bbc2d9_ffd9_4a90_938c_905be61df615$ctl20" value="Submit" disabled="disabled" class="aspNetDisabled" type="submit"></td>
+					</tr>
+		  </tbody></table>
+</div>
+      </div>
+      <div>
+        <div> </div>
       </div>
     </div>
-
-    <div class="w3-third w3-left-align bvnw-padding"><span id="SchoolHours2">
-    <h3>Choir Solo/Small Ensemble Concert</h3>
-	<h5><strong>Time: </strong>3:00 - 9:00 PM</h5>
-    <p><span id="DeltaPlaceHolderMain2"><span id="ctl00_ctl58_g_461ff232_c4d5_4fb2_bd23_ae514664b841_EventLoclb"><strong>Location: </strong>Little Theater, Vocal Music Multi-Purpose Area</span></span></p>
-    <p>&nbsp;</p>
-    </span>
-      <h3><span id="SchoolHours3" padding-left="1%" padding-right="1%">Lunch Menu</span></h3>
-      <p><span id="SchoolHours4">Beef &amp; Cheese Nachos<br>
-        Soft Tacos<br>
-        Popcorn Chicken with Pizza Stick<br>
-        BBQ Pork Rib Patty on Whole Grain Bun<br>
-        Spicy Chicken Patty Sandwich<br>
-        Whole Grain Pasta Bar<br>
-        Pizza Hut Pizza by the Slice<br>
-        Ham, Chicken or Cheese Deli Sandwiches<br>
-        Uncrustable with Pretzel Nugget &amp; String Cheese<br>
-        Entrée Salad Option<br>
-  <br>
-        Harvest Bar<br>
-        Fiesta Rice<br>
-        Refried Beans<br>
-        Steamed Corn<br>
-        Diced Tomatoes<br>
-        Chilled Fruit Cocktail<br>
-        Rosy Applesauce<br>
-  <br>
-  <strong>Premium Meal:</strong><br>
-        Queso and Chips<br>
-        Buffalo Chicken Flatbread<br>
-  <br>
-  <strong>A la Carte:</strong><br>
-        Grab and Go Chicken Caesar Salad</span></p>
-      <span>
-      <p>&nbsp;</p>
-    </span></div>
+    <div class="w3-third w3-center" id="StudentLniks">
+      <p><i><img src="resources/Blue_Valley_Northwest_High.png" width="200px" height="200px" alt="BVNW"/></i></p><table width="100%" border="0" class="w3-table w3-bordered w3-hoverable">
+		<div>
+<input type="text" name="search" placeholder="Search.."> </div>
+          <caption>
+          <br>
+          </caption>
+              <tbody>
+                <tr class="w3-purple">
+                  <td><strong>Student Links</strong></td>
+                </tr>
+                <tr>
+                  <td><a href="https://bvusd.instructure.com/login/canvas" target="_blank">Canvas</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://adfs.bluevalleyk12.org/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline&wctx=estsredirect%3d2%26estsrequest%3drQIIAbNSzigpKSi20tcvyC8qSczRy09Ly0xO1UvOz9XLL0rPTAGxioS4BDQOGVwNeLLcb2pF2kPJa1ZCqxjVcOrUz0nMS8nMS9dLLC6ouMDI-IKRsYuJxdDA2HgTE6uvs6-T5wmmCWflbjEJ-hele6aEF7ulpqQWJZZk5uc9YuINLU4t8s_LqQzJz07Nm8TMl5OfnpkXX1yUFp-Wk18OFADaUJCYXBJfkpmcnVqyi1klxTg1KdnEOFk3xcTYQtck2TxN19LEwFTXIMU0NcXYwMjUMtHyAMuGkF2cnsS52b4ksSg9tcRW1SgtJTUtsTSnBCysapyWk6xqnALyCQA1" target="_blank">Office 365</a></td>
+                </tr>
+                <tr>
+					<td><a href="resources/Bell-Schedule.pdf">Bell Schedule</a></td>
+                </tr>
+                <tr>
+                  <td><a href="http://o365.bluevalleyk12.org" target="_blank">Student Email</a></td>
+                </tr>
+                <tr>
+                  <td><a href="reporting.html" target="_blank">Report a Bully</a></td>
+                </tr>
+              </tbody>
+      </table>
+    </div>
+<div><span id="ImportantInfo">​​
+	<div> </div>
+			  <h3><strong class="w3-purple bvnw-padding" style="">Important Info:</strong></h3>
+			  <strong>School Hours: </strong>7:45 A.M. - 2:50 P.M. school hours<br>
+​<strong>Office Hours: </strong>7:00 A.M. - 4:00 P.M. office hours<br>
+		<h5><strong>Phone Information:</strong></h5>
+Office: <a href="tel:1-913-239-3400">(913) 239-3400</a><br>
+Attendance: <a href="tel:1-913-239-3401">(913) 239-3401</a><br>
+Nurse: <a href="tel:1-913-239-3423">(913) 239-3423</a><br>
+Counseling: <a href="tel:1-913-239-3415">(913) 239-3415</a><br>
+Information Line: <a href="tel:1-913-239-3499">(913) 239-3499</a><br>
+Fax: <a href="tel:1-913-239-3555">(913) 239-3555</a></span></div>       
   </div>
 </div>
 
@@ -235,7 +219,7 @@ $(function() {
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-  <p><a href="https://codepen.io/miroot/pen/aHCIg?q=calendar&limit=all&type=type-pens"><strong>Credits: </strong>Calendar CSS &amp; HTML</a></p>
+  <p>Created by Grant Fitzsimons - All Rights Reserved - Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 <script>
@@ -249,5 +233,6 @@ function myFunction() {
     }
 }
 </script>
-	</body>
+
+</body>
 </html>
