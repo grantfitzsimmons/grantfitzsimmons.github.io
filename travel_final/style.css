@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-right: auto;
+	line-height: 1.4;
+	max-width: 800px;
+	max-height: 760px;
+	padding: 0 25px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	align-content: center;
+}
+.Title {
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	text-transform: none;
+	font-weight: bolder;
+	color: #FFFFFF;
+    background: rgb(255,48,25);
+    background: -moz-linear-gradient(top, rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+	letter-spacing: normal;
+	padding: 8px;
+	border: thin outset #F4380E;
+	height: auto;
+	width: auto;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+.table,.table-all {
+	border-collapse:collapse;
+	border-spacing:0;
+	width:600px;
+	display:table
+}
+.table-all {
+	border:1px solid #ccc
+}
+.red,.hover-red:hover{
+	color:#fff!important;
+	background-color:#f44336!important
+}
