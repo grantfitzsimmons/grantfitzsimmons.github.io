@@ -12,7 +12,7 @@ body {
 	align-content: center;
 }
 .Title {
-		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	text-transform: none;
 	font-weight: bolder;
@@ -23,23 +23,41 @@ body {
     background: linear-gradient(to bottom, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
 	letter-spacing: normal;
-	padding: 8px;
 	border: thin outset #F4380E;
 	height: auto;
 	width: auto;
-	margin-top: 12px;
-	margin-bottom: 12px;
 }
 .table,.table-all {
 	border-collapse:collapse;
 	border-spacing:0;
 	width:600px;
-	display:table
+	display:table;
+  	border: none;
 }
 .table-all {
-	border:1px solid #ccc
+  	border: none
+}
+table.borderless th {
+    border-width: 0px;
+    background-color: white;   
+
 }
 .red,.hover-red:hover{
 	color:#fff!important;
 	background-color:#f44336!important
+}
+.brighten {
+    -webkit-filter: brightness(100%);
+}
+
+.brighten:hover {
+    -webkit-filter: brightness(135%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.link {
+	color:#fff!important
 }
