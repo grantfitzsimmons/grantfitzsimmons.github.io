@@ -48,15 +48,15 @@ table.borderless th {
 }
 .brighten {
     -webkit-filter: brightness(100%);
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .brighten:hover {
     -webkit-filter: brightness(135%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
 }
 .link {
 	color:#fff!important
