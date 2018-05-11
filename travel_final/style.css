@@ -1,15 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-	margin-top: 30px;
-	margin-left: 15px;
-	margin-right: auto;
+	margin-top: 30;
 	line-height: 1.4;
 	max-width: 800px;
 	max-height: 760px;
-	padding: 0 25px;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	align-content: center;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding-top: 0;
+	padding-right: 25px;
+	padding-bottom: 0;
+	padding-left: 25px;
 }
 .Title {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
